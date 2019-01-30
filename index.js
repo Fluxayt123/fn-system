@@ -97,8 +97,8 @@ message.channel.send(`Thanks for reporting ${rUser} for reason: ${reason}`)
     .addField("Channel", message.channel)
     .addField("Time", message.createdAt)
     .addField("Reason", reason)
-    .addField("@Mods", "_ _")
-
+    .addField("@test-mods", "_ _")
+    
     let reportschannel = message.guild.channels.find(`name`, "reports");
     if(!reportschannel) return message.channel.send("Couldn't find reports channel.");
 
