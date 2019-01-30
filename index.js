@@ -97,7 +97,7 @@ message.channel.send(`Thanks for reporting ${rUser} for reason: ${reason}`)
     .addField("Channel", message.channel)
     .addField("Time", message.createdAt)
     .addField("Reason", reason)
-    .addField("Ping", `<@&${role.id}>`)
+    .addField("Ping", `<@${role.toString()}>}`)
     
     let reportschannel = message.guild.channels.find(`name`, "reports");
     if(!reportschannel) return message.channel.send("Couldn't find reports channel.");
@@ -111,6 +111,20 @@ message.channel.send(`Thanks for reporting ${rUser} for reason: ${reason}`)
 
 
     return;
+  }
+
+  if(cmd === `${prefix}help`){
+ 
+    let sicon = message.author.displayAvatarURL;
+    let botembed = new Discord.RichEmbed()
+    .setDescription("Report Command Information")
+    .setColor("#b504d8")
+    .setThumbnail(sicon)
+    .addField("Command usage", "_ _")
+    .addField("*report (username) (reason)", "e.g *report @FN-Scrims#7505 for beeing toxic");
+
+
+    return message.channel.send(botembed);
   }
 
 
