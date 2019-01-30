@@ -11,7 +11,7 @@ const bot = new Discord.Client({diableEveryone: true});
 
 bot.on("ready", async () => {
   console.log(`${bot.user.username} is online!`);
-  bot.user.setActivity("*help");
+  bot.user.setActivity("FNPS");
 });
 
 bot.on("message", async message => {
