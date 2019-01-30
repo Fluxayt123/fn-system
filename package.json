@@ -1,0 +1,15 @@
+{
+  "name": "report-bot",
+  "version": "1.0.0",
+  "description": "A report bot for FN-Scrims",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Fluxa yt",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^11.4.2",
+    "dotenv": "^6.2.0"
+  }
+}
