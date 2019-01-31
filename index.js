@@ -1,4 +1,5 @@
 const botconfig = require("./botconfig.json");
+const ready = require("./ready.js")
 const token = process.env.TOKEN;
 const Discord = require("discord.js");
 require('dotenv/config');
@@ -124,7 +125,7 @@ message.channel.send(`Thanks for reporting ${rUser} for reason: ${reason}`)
     .setColor("#b504d8")
     .setThumbnail(sicon)
     .addField("Command usage", "_ _")
-    .addField("*report (username) (reason)", "e.g *report @user#7505 for beeing toxic");
+    .addField("*report (username) (reason)", "e.g *report @user#1251 for beeing toxic");
 
 
     return message.channel.send(botembed);
