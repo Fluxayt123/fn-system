@@ -1,5 +1,4 @@
 const botconfig = require("./botconfig.json");
-const ready = require("./ready.js")
 const token = process.env.TOKEN;
 const Discord = require("discord.js");
 require('dotenv/config');
@@ -10,10 +9,6 @@ http.createServer().listen(port);
 
 const bot = new Discord.Client({diableEveryone: true});
 
-bot.on("ready", async () => {
-  console.log(`${bot.user.username} is online!`);
-  bot.user.setActivity("FNPS");
-});
 
 bot.on("message", async message => {
   if(message.author.bot) return;
@@ -21,7 +16,7 @@ bot.on("message", async message => {
 
   let prefix = botconfig.prefix;
   let messageArray = message.content.split(" ");
-  let cmd = messageArray[0];
+  let cmd = messageArray[0].toLocaleLowerCase();
   let args = messageArray.slice(1);
 
   
